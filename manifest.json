@@ -1,0 +1,19 @@
+{
+  "name": "BookMyShow Venue Monitor",
+  "version": "0.1",
+  "description":
+    "Never miss your favourite seat in a movie, Monitor BookMyShow for a specific venue when its goin to available, juts paste the url of the page and get started. Its not the official. (BookMyShow is registered trademark and we are not associated with it)",
+  "icons": {
+  },
+  "permissions": [
+    "notifications",
+    "https://in.bookmyshow.com/*"
+  ],
+  "options_page": "options.html",
+  "background": { 
+    "scripts": [
+      "background.js"
+      ] 
+    },
+  "manifest_version": 2
+}
