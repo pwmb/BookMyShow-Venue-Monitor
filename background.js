@@ -20,12 +20,17 @@ monitor = setInterval(function() {
       //something has changed or first time
       const st = "Older: " + localStorage.latest_count+" Now: " + childElem.length
       localStorage.latest_count = childElem.length;
-      show1("Something has changed", st)
+      show1("Something new is added", "You might want to check whats added that you might not be tracking but may be intrested")
     }
 
     for (let index = 0; index < childElem.length; index++) {
-      if (childElem[index].dataset.name.includes(localStorage.find)) {
-        show1("WOW! Its available now", childElem[index].dataset.name)
+      let movieName = childElem[0].dataset.name.toLowerCase()
+      let queryString = localStorage.find.toLowerCase()
+      let matches = movieName.match(queryString)
+      if (matches) {
+        matches.forEach(element => {
+          show1("WOW! Its available now", `${match} is now showing your movie`)
+        });
       }
     }
     interval = 0
