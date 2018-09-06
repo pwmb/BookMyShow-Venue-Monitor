@@ -28,7 +28,7 @@ monitor = setInterval(function() {
       let queryString = localStorage.find.toLowerCase()
       let matches = movieName.match(queryString)
       if (matches) {
-        matches.forEach(element => {
+        matches.forEach(match => {
           show1("WOW! Its available now", `${match} is now showing your movie`)
         });
       }
